@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#SBATCH -J serial_test      # Job name
+#SBATCH -o job.%j.out         # Name of stdout output file (%j expands to jobId)
+#SBATCH -e job.%j.err
+#SBATCH -t 00:01:00           # Run time (hh:mm:ss) - 1.5 hours
+
+bin/serial_vecadd vec_4_0_a.txt vec_4_0_b.txt 
